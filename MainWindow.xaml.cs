@@ -20,5 +20,21 @@ namespace BuildAndChill
         {
             InitializeComponent();
         }
-    }
+
+        // MenuItems
+        // File
+        private void Preferences(object sender, RoutedEventArgs e) { /* Show Preferences Window */}
+        private void Settings(object sender, RoutedEventArgs e) { /* Show Settings Window */}
+        private void Exit(object sender, RoutedEventArgs e) { App.Current.Shutdown(); }
+
+        // Edit
+        private void Undo(object sender, RoutedEventArgs e) { }
+        private void Redo(object sender, RoutedEventArgs e) { /* Show Preferences Window */}
+
+
+        // Profiles
+
+        // Help
+        private void About(object sender, RoutedEventArgs e) { /* Show About Window */}
+            }
 }

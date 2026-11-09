@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildAndChill")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85ae57c9f76679a8056ef8328d6f0977c4f2a3fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8820f126bba3b8d6979a4f5edc40749a425273f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildAndChill")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildAndChill")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

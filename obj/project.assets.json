@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\software_projects\\BuildAndChill\\BuildAndChill\\BuildAndChill.csproj",
+      "projectUniqueName": "D:\\software_projects\\BuildAndChill\\BuildAndChill.csproj",
       "projectName": "BuildAndChill",
-      "projectPath": "D:\\software_projects\\BuildAndChill\\BuildAndChill\\BuildAndChill.csproj",
+      "projectPath": "D:\\software_projects\\BuildAndChill\\BuildAndChill.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\software_projects\\BuildAndChill\\BuildAndChill\\obj\\",
+      "outputPath": "D:\\software_projects\\BuildAndChill\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\User\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
@@ -83,7 +83,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.403/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

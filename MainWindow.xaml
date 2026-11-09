@@ -5,8 +5,144 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BuildAndChill"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Build and Chill" Height="450" Width="800">
+    <StackPanel>
+        <!-- Drop-down bar (File, Edit, Profiles etc) -->
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="Preferences"/>
+                <MenuItem Header="Settings"/>
+                <MenuItem Header="Exit" Click="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Undo" Command="ApplicationCommands.Undo"/>
+                <MenuItem Header="Redo" Command="ApplicationCommands.Redo"/>
+            </MenuItem>
+            <MenuItem Header="_Profiles">
+                <MenuItem Header="Save Profile"/>
+                <MenuItem Header="Load Profile"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="About"/>
+                <MenuItem Header="Getting Started"/>
+                <MenuItem Header="Check for Updates"/>
+            </MenuItem>
+        </Menu>
+        <!--Toolbar (Execute commands, enable different options)-->
+        <ToolBarPanel>
+            <ToolBar>
+                <CheckBox>
+                    Git
+                </CheckBox>
+                <CheckBox>
+                    Unreal
+                </CheckBox>
+                <CheckBox>
+                    Steam
+                </CheckBox>
+                <Button>
+                    <TextBlock>Build</TextBlock>
+                </Button>
+            </ToolBar>
+        </ToolBarPanel>
+        <!-- Catergory tabs (Git, Unreal, Steamworks, Build & Chill) -->
+        <TabControl>
+            <!--Git-->
+            <TabItem>
+                <!--Tab Header-->
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Git</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <!--Git Panel (Holds left and right panels next to each other)-->
+                <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                    <!--Git Actions Panel (Left Side)-->
+                    <StackPanel VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Name="gitShortDescriptionText" Margin="5" VerticalAlignment="Center">Short description here</TextBox>
+                            <Button Name="gitCommitButton" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center">Commit</Button>
+                        </StackPanel>
+                        <TextBox Name="gitLongDescriptionText" Margin="5" HorizontalAlignment="Left" Height="151" Width="281">Long description here</TextBox>
+                    </StackPanel >
+                    <StackPanel VerticalAlignment="Stretch">
+                        <ListView>
+                            <TextBox Text="This is an item"/>
+                        </ListView>
+                    </StackPanel>
+                    <!--Git Info Panel (Right Side)-->
+                </StackPanel>
 
-    </Grid>
+            </TabItem>
+            <!--Unreal Build Tools-->
+            <TabItem>
+                <!--Tab header-->
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Unreal Build Tool</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <!--Unreal Version Dropdown-->
+                        <TextBlock Margin="5,5,0,5" VerticalAlignment="Center" Text="Version"/>
+                        <ComboBox Margin="5,5,5,5">
+                            <!--TODO: Dynamically list all available engine versions -->
+                            <TextBlock>5.2</TextBlock>
+                        </ComboBox>
+                        <TextBlock Margin="5,5,0,5" VerticalAlignment="Center">Platform</TextBlock>
+                        <ComboBox Margin="5,5,5,5">
+                            <!--TODO: Dynamically list all available platforms -->
+                            <TextBlock>Windows</TextBlock>
+                            <TextBlock>Mac</TextBlock>
+                            <TextBlock>Linux</TextBlock>
+                        </ComboBox>
+                        <TextBlock Margin="5" VerticalAlignment="Center">Config</TextBlock>
+                        <ComboBox Margin="5">
+                            <!--TODO: Dynamically list all available configs-->
+                            <TextBlock>Debug</TextBlock>
+                            <TextBlock>Development</TextBlock>
+                            <TextBlock>Shipping</TextBlock>
+                        </ComboBox>
+                        <Separator Width="20" RenderTransformOrigin="0.5, 0.5">
+                            <Separator.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Separator.RenderTransform>
+                        </Separator>
+                        <TextBlock Margin="5" VerticalAlignment="Center">Cook on the fly</TextBlock>
+                        <CheckBox HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button Margin="5" HorizontalAlignment="Right">
+                            <TextBlock Margin="5">Add to builds</TextBlock>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">Engine Version</TextBlock>
+                            <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold">Platform</TextBlock>
+                            <TextBlock TextAlignment="Center" FontWeight="Bold"><Run Text="Config"/></TextBlock>
+                            <TextBlock TextAlignment="Center" FontWeight="Bold"><Run Text="Cook on fly"/></TextBlock>
+                        </StackPanel>
+                        <ListBox>
+                            <!--<StackPanel HorizontalAlignment="Stretch">
+                                <TextBlock>5.2</TextBlock>    
+                            </StackPanel-->
+                        </ListBox>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <!--Steamworks-->
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Steamworks</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
 </Window>
